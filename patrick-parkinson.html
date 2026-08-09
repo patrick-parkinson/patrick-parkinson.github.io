@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)file:///C:/Users/kille/Downloads/patrick-parkinson.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patrick Parkinson — Retail Operations Leader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./patrick-parkinson_files/css2" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EEF0E6;
+    --paper-line:#D9DCC9;
+    --ink:#1D231F;
+    --forest:#2E4A35;
+    --forest-deep:#203327;
+    --sage:#93A98C;
+    --brass:#AD8A2E;
+    --rust:#9C4B32;
+    --max-w: 880px;
+    --pad: clamp(20px, 5vw, 48px);
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
+  }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Source Serif 4', serif;
+    font-size:17px;
+    line-height:1.6;
+    background-image:
+      linear-gradient(var(--paper-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--paper-line) 1px, transparent 1px);
+    background-size:34px 34px;
+    background-position: -1px -1px;
+  }
+
+  a{ color:var(--forest); }
+
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--forest);
+  }
+
+  h1,h2,h3{
+    font-family:'Oswald', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    margin:0;
+    color:var(--ink);
+  }
+
+  .wrap{
+    max-width:var(--max-w);
+    margin:0 auto;
+    padding:0 var(--pad);
+  }
+
+  /* ---------- MASTHEAD ---------- */
+  header.masthead{
+    padding:48px 0 0;
+    border-bottom:3px double var(--ink);
+  }
+  .masthead-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:24px;
+    flex-wrap:wrap;
+    padding-bottom:28px;
+  }
+  .masthead-name h1{
+    font-size:clamp(40px, 8vw, 68px);
+    line-height:0.95;
+    font-weight:700;
+  }
+  .masthead-role{
+    margin-top:10px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:14px;
+    letter-spacing:0.06em;
+    color:var(--forest-deep);
+    text-transform:uppercase;
+  }
+  .status-tag{
+    border:1.5px solid var(--forest);
+    padding:10px 14px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--forest-deep);
+    background:#fff;
+    white-space:nowrap;
+  }
+  .status-tag .dot{
+    display:inline-block;
+    width:8px; height:8px;
+    border-radius:50%;
+    background:var(--forest);
+    margin-right:8px;
+    box-shadow:0 0 0 3px rgba(46,74,53,0.15);
+  }
+
+  /* ---------- FLOOR PLAN (signature element) ---------- */
+  .floorplan-section{
+    padding:26px 0 34px;
+  }
+  .floorplan-caption{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    letter-spacing:0.1em;
+    color:var(--sage);
+    text-transform:uppercase;
+    margin-top:10px;
+  }
+  svg.floorplan{ width:100%; height:auto; display:block; }
+  .fp-wall{ fill:none; stroke:var(--ink); stroke-width:2; }
+  .fp-wall-dashed{ fill:none; stroke:var(--ink); stroke-width:1.4; stroke-dasharray:5 4; }
+  .fp-zone-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.06em;
+    fill:var(--forest-deep);
+    text-transform:uppercase;
+  }
+  .fp-num{
+    font-family:'Oswald', sans-serif;
+    font-weight:600;
+    font-size:20px;
+    fill:var(--paper);
+  }
+  .fp-num-circle{
+    fill:var(--forest);
+    transition:fill .25s ease;
+  }
+  .fp-zone-group{ cursor:pointer; }
+  .fp-zone-group:hover .fp-num-circle,
+  .fp-zone-group.active .fp-num-circle{ fill:var(--rust); }
+  .fp-zone-group:hover .fp-zone-label,
+  .fp-zone-group.active .fp-zone-label{ fill:var(--rust); }
+
+  /* ---------- SECTIONS ---------- */
+  section{
+    padding:52px 0;
+    border-bottom:1px solid var(--paper-line);
+    position:relative;
+  }
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin-bottom:26px;
+  }
+  .section-num{
+    font-family:'Oswald', sans-serif;
+    font-weight:700;
+    font-size:15px;
+    color:#fff;
+    background:var(--forest);
+    padding:4px 9px;
+    line-height:1;
+  }
+  .section-head h2{
+    font-size:clamp(22px,4vw,30px);
+  }
+  .section-sub{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--sage);
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    margin-top:2px;
+  }
+
+  .about-text{
+    max-width:62ch;
+    font-size:18px;
+  }
+
+  /* ---------- EXPERIENCE ---------- */
+  .timeline{
+    border-left:2px solid var(--forest);
+    margin-left:6px;
+    padding-left:0;
+  }
+  .role{
+    position:relative;
+    padding:0 0 30px 26px;
+  }
+  .role::before{
+    content:'';
+    position:absolute;
+    left:-7px; top:5px;
+    width:12px; height:12px;
+    background:var(--paper);
+    border:2.5px solid var(--forest);
+    border-radius:50%;
+  }
+  .role:last-child{ padding-bottom:0; }
+  .role-top{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:6px 16px;
+    align-items:baseline;
+  }
+  .role-title{
+    font-family:'Oswald', sans-serif;
+    font-size:19px;
+    text-transform:none;
+    letter-spacing:0.01em;
+    font-weight:600;
+  }
+  .role-dates{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    color:var(--rust);
+    white-space:nowrap;
+  }
+  .role-org{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    color:var(--forest-deep);
+    margin-top:2px;
+  }
+  .role-loc{
+    font-size:14px;
+    color:#4b5148;
+    margin-top:6px;
+  }
+
+  /* ---------- SKILLS (STOCKROOM) ---------- */
+  .stock-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0 40px;
+  }
+  @media (max-width:560px){ .stock-grid{ grid-template-columns:1fr; gap:8px 0; } }
+  .stock-shelf h3{
+    font-size:14px;
+    letter-spacing:0.08em;
+    color:var(--forest-deep);
+    border-bottom:1px solid var(--ink);
+    padding-bottom:8px;
+    margin-bottom:10px;
+  }
+  .stock-shelf ul{
+    list-style:none;
+    margin:0 0 24px;
+    padding:0;
+  }
+  .stock-shelf li{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    padding:8px 0;
+    border-bottom:1px dashed var(--paper-line);
+    font-size:15.5px;
+  }
+  .stock-shelf li:last-child{ border-bottom:none; }
+  .stock-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    color:var(--sage);
+    text-transform:uppercase;
+    white-space:nowrap;
+    align-self:center;
+  }
+
+  /* ---------- EDUCATION (BACK OFFICE) ---------- */
+  .file-card{
+    border:1.5px solid var(--ink);
+    background:#fff;
+    padding:22px 24px;
+    max-width:60ch;
+    position:relative;
+  }
+  .file-card::before{
+    content:'RECORD';
+    position:absolute;
+    top:-10px; left:18px;
+    background:var(--paper);
+    padding:0 8px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.12em;
+    color:var(--sage);
+  }
+  .file-title{
+    font-family:'Oswald', sans-serif;
+    font-size:19px;
+    font-weight:600;
+  }
+  .file-meta{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    color:var(--rust);
+    margin-top:4px;
+  }
+  .file-body{ margin-top:12px; font-size:15.5px; }
+
+  /* ---------- RECOMMENDATION (FRONT DESK) ---------- */
+  blockquote.reco{
+    margin:0;
+    padding:26px 28px;
+    background:#fff;
+    border-left:4px solid var(--forest);
+    font-size:17px;
+    font-style:italic;
+    max-width:64ch;
+  }
+  .reco-attr{
+    margin-top:16px;
+    font-style:normal;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    color:var(--forest-deep);
+    letter-spacing:0.02em;
+  }
+  .reco-attr strong{ display:block; font-family:'Oswald', sans-serif; font-size:15px; text-transform:none; color:var(--ink); letter-spacing:0.01em; }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    padding:38px 0 60px;
+  }
+  .footer-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--sage);
+  }
+  .footer-loc{
+    margin-top:6px;
+    font-size:15px;
+    color:var(--ink);
+  }
+
+  a:focus-visible, .fp-zone-group:focus-visible{
+    outline:2.5px solid var(--rust);
+    outline-offset:3px;
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="masthead-top">
+      <div class="masthead-name">
+        <h1>Patrick<br>Parkinson</h1>
+        <div class="masthead-role">Retail Floor Manager - Avid Bowler</div>
+      </div>
+      <div class="status-tag"><span class="dot"></span>On shift — Goldflower Cannabis, Cape Coral FL</div>
+    </div>
+  </div>
+
+  <div class="floorplan-section">
+    <div class="wrap">
+      <svg class="floorplan" viewBox="0 0 640 260" role="img" aria-label="Store floor plan used as page navigation">
+        <!-- outer shell -->
+        <rect class="fp-wall" x="10" y="10" width="620" height="240"></rect>
+        <!-- Front Desk / entrance small room bottom-left -->
+        <line class="fp-wall" x1="10" y1="190" x2="150" y2="190"></line>
+        <line class="fp-wall" x1="150" y1="190" x2="150" y2="250"></line>
+        <path class="fp-wall-dashed" d="M150,215 A25,25 0 0 1 175,190"></path>
+        <!-- Entrance opening top-left -->
+        <line class="fp-wall" x1="10" y1="10" x2="70" y2="10"></line>
+        <path class="fp-wall-dashed" d="M70,10 A40,40 0 0 1 110,50"></path>
+        <line class="fp-wall" x1="110" y1="10" x2="110" y2="50"></line>
+        <!-- divider between Sales Floor and Stockroom -->
+        <line class="fp-wall" x1="420" y1="10" x2="420" y2="140"></line>
+        <line class="fp-wall" x1="420" y1="170" x2="420" y2="250"></line>
+        <path class="fp-wall-dashed" d="M420,140 A30,30 0 0 1 420,170"></path>
+        <!-- divider Stockroom / Back Office -->
+        <line class="fp-wall" x1="420" y1="180" x2="630" y2="180"></line>
+        <line class="fp-wall" x1="510" y1="180" x2="510" y2="180"></line>
+
+        <!-- Zone 1: Entrance -->
+        <g class="fp-zone-group active" tabindex="0" role="link" aria-label="Go to Entrance, About section" data-target="about">
+          <text class="fp-zone-label" x="50" y="45" text-anchor="middle">Entrance</text>
+          <circle class="fp-num-circle" cx="50" cy="66" r="15"></circle>
+          <text class="fp-num" x="50" y="74" text-anchor="middle">1</text>
+        </g>
+
+        <!-- Zone 2: Sales Floor -->
+        <g class="fp-zone-group" tabindex="0" role="link" aria-label="Go to Sales Floor, Experience section" data-target="experience">
+          <text class="fp-zone-label" x="285" y="115" text-anchor="middle">Sales Floor</text>
+          <circle class="fp-num-circle" cx="285" cy="140" r="17"></circle>
+          <text class="fp-num" x="285" y="147" text-anchor="middle">2</text>
+        </g>
+
+        <!-- Zone 3: Stockroom -->
+        <g class="fp-zone-group" tabindex="0" role="link" aria-label="Go to Stockroom, Skills section" data-target="skills">
+          <text class="fp-zone-label" x="525" y="75" text-anchor="middle">Stockroom</text>
+          <circle class="fp-num-circle" cx="525" cy="100" r="16"></circle>
+          <text class="fp-num" x="525" y="106" text-anchor="middle">3</text>
+        </g>
+
+        <!-- Zone 4: Back Office -->
+        <g class="fp-zone-group" tabindex="0" role="link" aria-label="Go to Back Office, Education section" data-target="education">
+          <text class="fp-zone-label" x="525" y="207" text-anchor="middle">Back Office</text>
+          <circle class="fp-num-circle" cx="525" cy="228" r="14"></circle>
+          <text class="fp-num" x="525" y="233" text-anchor="middle" style="font-size:16px">4</text>
+        </g>
+
+        <!-- Zone 5: Front Desk -->
+        <g class="fp-zone-group" tabindex="0" role="link" aria-label="Go to Front Desk, Recommendation section" data-target="reco">
+          <text class="fp-zone-label" x="80" y="208" text-anchor="middle">Front Desk</text>
+          <circle class="fp-num-circle" cx="80" cy="228" r="14"></circle>
+          <text class="fp-num" x="80" y="233" text-anchor="middle" style="font-size:16px">5</text>
+        </g>
+      </svg>
+      <div class="floorplan-caption">Store map — tap a zone to walk through Patrick's profile</div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="about">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <div>
+        <h2>Entrance</h2>
+        <div class="section-sub">About</div>
+      </div>
+    </div>
+    <p class="about-text">Retail Floor Manager with deep roots in Southwest Florida's cannabis industry. I keep sales floors running clean, teams engaged, and customers taken care of. Especially through the messy middle of acquisitions, rebrands, and rapid growth. I'm an intuitive problem-solver. I find the efficient fix and get the team moving on it together, backed by a solid understanding of management principles built on the floor, instead of read in a book.</p>
+  </section>
+
+  <section id="experience">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <div>
+        <h2>Sales Floor</h2>
+        <div class="section-sub">Experience</div>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="role">
+        <div class="role-top">
+          <div class="role-title">Retail Floor Manager</div>
+          <div class="role-dates">Oct 2025 — Present</div>
+        </div>
+        <div class="role-org">Goldflower Cannabis</div>
+        <div class="role-loc">Cape Coral, FL · On-site · Full-time</div>
+      </div>
+
+      <div class="role">
+        <div class="role-top">
+          <div class="role-title">Assistant General Manager</div>
+          <div class="role-dates">Feb 2025 — Oct 2025</div>
+        </div>
+        <div class="role-org">Planet 13 Florida</div>
+        <div class="role-loc">Cape Coral, FL · On-site · Led the Cape Coral store through an ownership transition, keeping operations steady and the team engaged.</div>
+      </div>
+
+      <div class="role">
+        <div class="role-top">
+          <div class="role-title">Customer Service Specialist</div>
+          <div class="role-dates">Jan 2024 — Feb 2025</div>
+        </div>
+        <div class="role-org">Planet 13 Florida</div>
+        <div class="role-loc">Cape Coral, FL · On-site</div>
+      </div>
+
+      <div class="role">
+        <div class="role-top">
+          <div class="role-title">Dispensary Associate</div>
+          <div class="role-dates">2019 — 2020</div>
+        </div>
+        <div class="role-org">GrowHealthy</div>
+        <div class="role-loc">Cape Coral, FL</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <div>
+        <h2>Stockroom</h2>
+        <div class="section-sub">Skills on hand</div>
+      </div>
+    </div>
+
+    <div class="stock-grid">
+      <div class="stock-shelf">
+        <h3>Leadership &amp; Operations</h3>
+        <ul>
+          <li>Problem Solving <span class="stock-tag">1 endorsement</span></li>
+          <li>Creative Problem Solving <span class="stock-tag">1 endorsement</span></li>
+          <li>Organization Skills <span class="stock-tag">1 endorsement</span></li>
+          <li>Analytical Skills</li>
+        </ul>
+      </div>
+      <div class="stock-shelf">
+        <h3>Technical &amp; Systems</h3>
+        <ul>
+          <li>Information Technology</li>
+          <li>Technical Support <span class="stock-tag">1 endorsement</span></li>
+          <li>Computer Hardware <span class="stock-tag">1 endorsement</span></li>
+          <li>Networking <span class="stock-tag">1 endorsement</span></li>
+          <li>Network Administration <span class="stock-tag">1 endorsement</span></li>
+          <li>Microsoft Office</li>
+          <li>Windows 10</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="section-head">
+      <span class="section-num">04</span>
+      <div>
+        <h2>Back Office</h2>
+        <div class="section-sub">Education</div>
+      </div>
+    </div>
+
+    <div class="file-card">
+      <div class="file-title">High School Diploma</div>
+      <div class="file-meta">Florida Virtual School · 2013 — 2016</div>
+      <div class="file-body">Grades 9–12, with a year and a half attended in person at Cape Coral High School (2013–2014). Activities: Bowling Team, GSA.</div>
+    </div>
+  </section>
+
+  <section id="reco" style="border-bottom:none;">
+    <div class="section-head">
+      <span class="section-num">05</span>
+      <div>
+        <h2>Front Desk</h2>
+        <div class="section-sub">What people say</div>
+      </div>
+    </div>
+
+    <blockquote class="reco">
+      "I've had the opportunity to oversee Patrick in his role as Assistant General Manager for Planet 13 Florida's Cape Coral location, and he has been an exceptional leader within our retail operations. Patrick was a key part of our acquisition transition, keeping operations steady, supporting customers, and keeping the team engaged through a complex period of change. His professional growth into the Assistant General Manager role reflects his leadership skills, operational focus, and willingness to learn. Patrick's contributions were central to our Cape Coral store's success. He is dependable, adaptable, and driven — qualities that will continue to fuel his success in any industry."
+      <div class="reco-attr">
+        <strong>Jeffrey Trappe</strong>
+        Chief Operating Officer, Florida Operations — Planet 13 Holdings
+      </div>
+    </blockquote>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-tag">Store hours end, the work doesn't</div>
+    <div class="footer-loc">Cape Coral, Florida</div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.fp-zone-group').forEach(function(zone){
+    var targetId = zone.getAttribute('data-target');
+    function go(){
+      var el = document.getElementById(targetId);
+      if(el){ el.scrollIntoView({behavior:'smooth', block:'start'}); }
+    }
+    zone.addEventListener('click', go);
+    zone.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); go(); }
+    });
+  });
+
+  var sections = ['about','experience','skills','education','reco'];
+  var zones = {};
+  document.querySelectorAll('.fp-zone-group').forEach(function(z){
+    zones[z.getAttribute('data-target')] = z;
+  });
+
+  if('IntersectionObserver' in window){
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          Object.values(zones).forEach(function(z){ z.classList.remove('active'); });
+          if(zones[entry.target.id]){ zones[entry.target.id].classList.add('active'); }
+        }
+      });
+    }, { rootMargin: '-40% 0px -50% 0px' });
+
+    sections.forEach(function(id){
+      var el = document.getElementById(id);
+      if(el){ observer.observe(el); }
+    });
+  }
+</script>
+
+
+
+</body></html>
